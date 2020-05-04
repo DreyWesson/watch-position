@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #fece0c;
+  /* background-image: linear-gradient(to bottom right, #fece0c, #fece0c);
+  */
+  min-height: 100vh;
+}
+.container {
+  width: 100%;
+  max-width: 414px;
+  margin: 15px auto;
+  background: #131314;
+  padding: 25px 15px;
+  border-radius: 10px 10px 10px 0px;
+  box-shadow: 0 10px 50px #131314;
+}
+h1 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  opacity: 0.7;
+}
+form {
+  margin: 0px -15px;
+}
+form .form-group {
+  width: 100%;
+  padding: 0px 15px;
+  background-image: linear-gradient(to bottom right, #fece0c, #fece0c);
+  border-bottom: 1px solid #414141;
+}
+form .form-group:last-of-type {
+  border-bottom: none;
+  margin-bottom: 15px;
+}
+form .form-group .input-field {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #000;
+  font-size: 18px;
+}
+form .form-group .input-field.valid {
+  color: #008000;
+}
+form .form-group .input-field.invalid {
+  color: #f00;
+}
+form .form-group .input-field.placeholder {
+  color: #53565a;
+}
+form .login-btn {
+  margin: 0px 15px;
+  display: inline-block;
+  padding: 10px 40px;
+  color: #fece0c;
+  font-size: 20px;
+  background: none;
+  border: 2px solid #fece0c;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+form .login-btn:hover {
+  background-color: #fece0c;
+  color: black;
+}
+
+form .reset-btn {
+  margin: 0px 15px;
+  display: inline-block;
+  padding: 10px 40px;
+  color: #fece0c;
+  font-size: 20px;
+  background: none;
+  border: 2px solid #fece0c;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+form .reset-btn:hover {
+  background-color: #fece0c;
+  color: black;
+}

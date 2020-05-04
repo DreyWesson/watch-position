@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="quick-form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login to your account</h1>
+      <br />
+      <form name="login-form" id="login-form" action="/welcome-page.html">
+        <div class="form-group">
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            id="username"
+            class="input-field"
+            autofocus
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            id="password"
+            class="input-field"
+            required
+          />
+        </div>
+        <!-- <input type="submit" value="LOG IN" class="login-btn" /> -->
+        <button type="submit" class="reset-btn">RESET</button>
+        <button type="submit" class="login-btn">LOG IN</button>
+      </form>
+    </div>
+    <script src="/validation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Bicycle(speed, gear, cadence, tirePressure) {
+        this.speed = speed;
+        this.gear = gear;
+        this.cadence = cadence;
+        this.tirePressure = tirePressure;
+        // arrow function is lexical binding
+        // (binds this to where they are created not where they are called)
+        this.inflateTires = (num) => console.log((this.tirePressure += num));
+      }
+
+      const bicycle1 = new Bicycle(50, 20, 4, 25);
+
+      const bicycle2 = new Bicycle(75, 15, 6, 35);
+
+      function Mechanic(name) {
+        this.name = name;
+      }
+      const mike = new Mechanic("Mike");
+      // bicycle1.inflateTires(4);
+      // bicycle2.inflateTires(8);
+      mike.inflateTires = bicycle1.inflateTires;
+      mike.inflateTires(6);
+      mike.inflateTires = bicycle2.inflateTires;
+      mike.inflateTires(6);
+
+      let post = {
+        title: "New features in JS",
+        replies: 19,
+      };
+      post[Symbol.iterator] = function () {
+        let properties = Object.keys(this);
+        let count = 0;
+        let isDone = false;
+
+        let next = () => {
+          if (count >= properties.length) {
+            isDone = true;
+          }
+          return { done: isDone, value: this[properties[count++]] };
+        };
+        return { next };
+      };
+      for (let p of post) {
+        console.log(p);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "folders": [
+	{
+		"name": "move",
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "move"
+  }
+}
