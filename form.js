@@ -108,3 +108,23 @@ function isPassword(password1) {
   let regex = /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/;
   return regex.test(password1);
 }
+
+//Focus ring: Implementation to prevent default browser style
+function handleFirstTab(e) {
+  if (e.keyCode === 9) {
+    // the "I am a keyboard user" key
+    document.body.classList.add("user-is-tabbing");
+    window.removeEventListener("keydown", handleFirstTab);
+  }
+}
+
+window.addEventListener("keydown", handleFirstTab);
+
+function handleMouseDownOnce() {
+  document.body.classList.remove("user-is-tabbing");
+
+  window.removeEventListener("mousedown", handleMouseDownOnce);
+  window.addEventListener("keydown", handleFirstTab);
+}
+
+window.addEventListener("keydown", handleFirstTab);

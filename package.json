@@ -21,6 +21,7 @@
     "jest": "^25.5.1"
   },
   "dependencies": {
-    "particles.js": "^2.0.0"
+    "particles.js": "^2.0.0",
+    "what-input": "^5.2.7"
   }
 }
